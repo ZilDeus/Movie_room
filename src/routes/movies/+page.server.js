@@ -1,5 +1,10 @@
 import { GetUser, GetVideos } from "../../lib/server/getter";
 export async function load({ cookies }) {
+
+  if (!cookies.get("user-id")) {
+    console.log("user-id not found.... redirecting to sign-in page");
+    redirect(301, "./sign-in");
+  }
   const user = await GetUser(cookies.get("user-id"));
 
   const videos = await GetVideos();
