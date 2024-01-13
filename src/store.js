@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-export const user = writable();
+//dummy data
 export const rooms = writable(
   [
     {

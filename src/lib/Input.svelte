@@ -33,7 +33,7 @@
       on:change={onChange}
       on:input={onInput}
       bind:this={inputRef}
-      class="shadow-sm block w-full sm:text-sm border-gray-300 rounded-md py-3 outline-none p-2.5 border border-2"
+      class="shadow-sm block w-full sm:text-sm border-gray-300 rounded-md py-3 outline-none p-2.5 border-2"
     />
   </div>
 </div>

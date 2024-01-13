@@ -5,7 +5,8 @@
 	export let onClick = null;
 </script>
 
-<button {disabled}
+<button
+  {disabled}
 	{type}
 	on:click={onClick()}
   formaction={formAction || null}

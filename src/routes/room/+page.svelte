@@ -1,7 +1,6 @@
 <script>
   import Nav from "$lib/Nav.svelte";
   export let data;
-  console.log(data);
 </script>
 
 <div class="flex flex-col max-h-screen">

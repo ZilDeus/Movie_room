@@ -1,19 +1,13 @@
 import { redirect } from "@sveltejs/kit";
 
 export const actions = {
-  default: async ({ request, cookies }) => {
+  default: async ({ request }) => {
     const form = await request.formData();
     const username = form.get("username");
     const email = form.get("email");
     const password = form.get("password");
-    if (email === "" || password === "") {
-      redirect(301, "/");
-    }
-    console.log(email + " ::: " + password);
-
-    console.log("sending request");
     const response = await fetch("http://192.168.4.14:8000/api/signup/", {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -23,7 +17,6 @@ export const actions = {
         "password": password,
       }),
     });
-    console.log(response);
-    //redirect(303, "/");
+    redirect(303, "/");
   },
 };

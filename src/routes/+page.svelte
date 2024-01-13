@@ -5,7 +5,6 @@
   import Button from "$lib/Button.svelte";
   export let data;
   let user = data.user;
-  console.log(user);
 </script>
 
 <Nav user={user.username} />
