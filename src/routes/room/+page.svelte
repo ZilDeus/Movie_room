@@ -10,7 +10,7 @@
     <div class="w-3/4 bg-black h-full float-left">
       <video class="h-full w-full" controls>
         <source
-          src="http://192.168.4.14:8000/api/media/uploaded_video/mov_bbb_05ZBnJF.mp4"
+          src={"http://192.168.4.14:8000/api" + data.path}
           type="video/mp4"
         />
       </video>
